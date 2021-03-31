@@ -1,0 +1,225 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.star
+{
+  width: 10px;
+  position: absolute;
+top: 372px;
+left: 335px;
+}
+.firstQuote {
+width: 50px;
+position: absolute;
+top:205px;
+left:70px;
+transform: rotate(-180deg);
+ filter: sepia(100%);
+}
+.header h1{
+  color: white;
+
+}
+.quote{
+  position: absolute;
+  top:240px;
+  left:70px;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #212635;
+  width: 100%;
+}
+
+.logo {
+  float: left;
+}
+
+
+.navbarLinks {
+  visibility: hidden;
+  float: right;
+  margin-top: 20px;
+  margin-right: 100px;
+  /* transition: 200ms; */
+}
+
+.dclogo img {
+  width: 100px;
+  margin-left: 20px;
+  transform: rotate(-20deg);
+  transition: 1s;
+}
+
+.dclogo {
+  transition: 1s;
+  display: inline;
+}
+
+.navbar {
+  height: 80px;
+  width: 100%;
+  background-color: #151923;
+  position: fixed;
+  transition: 1s;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #151923;
+}
+
+#navlink li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 16px 14px;
+  text-decoration: none;
+}
+
+
+#navlink li a:hover {
+  background-color: #111;
+}
+
+.navbarLinks li {
+  display: inline;
+}
+
+.navbar img {
+  width: 70px;
+  transition: 0.5s;
+}
+
+.header {
+  background-image: url('https://images.hdqwalls.com/wallpapers/dc-universe-4k-z9.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100vw;
+  height: 55vw;
+}
+
+/* .header img
+{
+  height: 100%;
+  width: 100%;
+} */
+
+.footer {
+  width: 100vw;
+  height: 350px;
+  position: relative;
+  background-color: #151923;
+  border-radius: 3px;
+}
+
+.footer-content {
+  /* /* display: flex; */
+  /* align-items: center; */
+  justify-content: center;
+  height: 300px;
+  display: flex;
+  padding: 40px 60px;
+  width: 100%;
+  border-bottom: 1px solid #212635;
+}
+
+.footer-section {
+  width: 23%;
+}
+
+.footer-content .form {
+  width: 33%;
+}
+
+.footer-content .form p {
+  font-size: 14px;
+}
+
+.footer-section input {
+  border: 1px solid #84849d;
+  padding: 10px 25px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.footer-section button {
+  padding: 12px 78px;
+  color: white;
+  font-size: 15px;
+  background-color: #5d7cc5;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-section li {
+  list-style: none;
+  padding-bottom: 7px;
+}
+
+.footer-section li a {
+  text-decoration: none;
+  color: #A5A6AA;
+}
+
+.footer-section h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  color: #A5A6AA;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.loading {
+  position: fixed;
+  z-index: 9999999;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #151923;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading img {
+  width: 300px;
+}
+
+.loading.hidden {
+  animation: fadeOutLoading 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutLoading {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

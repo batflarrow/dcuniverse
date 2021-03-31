@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Hail Dc</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="./styles/aboutpage.css" />
+    <link rel="stylesheet" href="./assets/bigImgView/style.css">
+    <link rel="icon" href="./assets/favicon.ico" />
+</head>
+
+<body>
+     <div class="header">
+    <div class="dclogo navbar">
+            <div class="logo">
+                <img src="./assets/dclogo.png" />
+             
+            </div>
+            
+            <div id="navlink" class="navbarLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Dc>>Marvel</a></li>
+                    <li><a href="about2.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+     
+       </div>
+      <div class="photogallery">
+       <marquee><h1>Hail Dc</h1> </marquee> 
+        <div class="row">
+            <div class="column">
+              <img id="myImg" src="https://i.pinimg.com/originals/eb/8a/56/eb8a5604652b42aafa839e28c88e42b2.jpg"  onclick='bigImgView(this.src)' alt="dcvmarvel"    >
+            </div>
+            <div class="column">
+              <img id="myImg"  src="https://comicbookandbeyond.com/wp-content/uploads/2018/06/3-40.jpg" onclick='bigImgView(this.src)' alt="dcvmarvel">
+            </div>
+            <div class="column">
+              <img id="myImg" src="https://i.pinimg.com/originals/f8/6e/71/f86e71462f28c5800fd9b752006c13f2.jpg"onclick='bigImgView(this.src)' alt="dcvmarvel">
+            </div>
+            <div class="column">
+              <img id="myImg" src="https://i.pinimg.com/originals/59/96/68/59966801b27bade5745abecbdd75cb96.jpg"  onclick='bigImgView(this.src)' alt="dcvmarvel">
+            </div>
+          </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Gallery</h3>
+                <ul>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Trending</a></li>
+                    <li><a href="#">Picks</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Marketplace</h3>
+                <ul>
+                    <li><a href="#">Trending</a></li>
+                    <li><a href="#">Best selling</a></li>
+                    <li><a href="#">Latest</a></li>
+                </ul>
+            </div>
+            <div class="footer-section form">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter to get your weekly dose the DC Universe</p>
+                <input type="email" placeholder="Enter your email address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; Amitvikram Dwivedi
+        </div>
+    </footer>
+    <!-- <script src="./js/loadingPage.js"></script> -->
+    <script>
+
+
+
+// Preview function which takes a image url ( IMG tag's src sttribute ) as parameter.
+
+let bigImgView = (imgSrc) => {
+
+    // Making elements
+    let divP = document.createElement('DIV');
+    let spanC = document.createElement('SPAN');
+    let imgC = document.createElement("IMG");
+
+    // Setting attributes
+    divP.setAttribute('class', 'bib-modal');
+    spanC.setAttribute('class', 'bib-close');
+    imgC.setAttribute('class', 'bib-modal-content');
+    imgC.setAttribute('src', imgSrc);
+
+    // Adding texts
+    spanC.innerHTML = '&times;';
+
+    // Handling events
+    spanC.onclick = function(){
+        this.parentElement.remove();
+    }
+
+    // Appending childs
+    divP.appendChild(spanC);
+    divP.appendChild(imgC);
+
+    // Appending to body
+    document.body.appendChild(divP);
+    divP.style.display = 'block';
+    console.log("Big image");
+
+}
+
+
+</script>
+</body>
+
+</html>

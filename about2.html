@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>About</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="./styles/aboutpage.css" />
+    <link rel="stylesheet" href="./assets/bigImgView/style.css">
+    <link rel="icon" href="./assets/favicon.ico" />
+</head>
+
+<body>
+     <div class="header">
+    <div class="dclogo navbar">
+            <div class="logo">
+                <img src="./assets/dclogo.png" />
+             
+            </div>
+            
+            <div id="navlink" class="navbarLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Dc>>Marvel</a></li>
+                    <li><a href="about2.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+     
+       </div>
+      <div class="photogallery">
+      <h1>Hi I am batflarrow(Batman+flash+Arrow)</h1> 
+      <h2>A guy who is always HAPPY,makes everyone HAPPY and will remain HAPPY until his death.A great lover of laughter.</h2>
+        <div class="row">
+            <div class="column">
+              <img id="myImg" src="https://media-exp1.licdn.com/dms/image/C4E03AQGUKEsBUu-HIg/profile-displayphoto-shrink_800_800/0/1613473691993?e=1622678400&v=beta&t=N7_vNa_HmYcsjaCwJUoo9j52OgNmNuj2s4VJvK2iUYY"  onclick='bigImgView(this.src)' alt="dcvmarvel"    >
+            </div>
+            <div class="column">
+              <img id="myImg"  src="https://image.cnbcfm.com/api/v1/image/105814861-1553608877209ben-affleck-batman-1.jpg?v=1553609938&w=1600&h=900" onclick='bigImgView(this.src)' alt="dcvmarvel">
+            </div>
+            <div class="column">
+                <img id="myImg" src="https://tvline.com/wp-content/uploads/2020/04/flash-gustin-contract-talks.jpg"  onclick='bigImgView(this.src)' alt="dcvmarvel">
+              </div>
+            <div class="column">
+              <img id="myImg" src="https://m.media-amazon.com/images/M/MV5BMTU4ODkzNTA4NF5BMl5BanBnXkFtZTgwMTYzNzMyNjE@._V1_UY1200_CR750,0,630,1200_AL_.jpg"onclick='bigImgView(this.src)' alt="dcvmarvel">
+            </div>
+           
+          </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Gallery</h3>
+                <ul>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Trending</a></li>
+                    <li><a href="#">Picks</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Marketplace</h3>
+                <ul>
+                    <li><a href="#">Trending</a></li>
+                    <li><a href="#">Best selling</a></li>
+                    <li><a href="#">Latest</a></li>
+                </ul>
+            </div>
+            <div class="footer-section form">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter to get your weekly dose the DC Universe</p>
+                <input type="email" placeholder="Enter your email address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; Amitvikram Dwivedi
+        </div>
+    </footer>
+    <!-- <script src="./js/loadingPage.js"></script> -->
+    <script>
+
+
+
+// Preview function which takes a image url ( IMG tag's src sttribute ) as parameter.
+
+let bigImgView = (imgSrc) => {
+
+    // Making elements
+    let divP = document.createElement('DIV');
+    let spanC = document.createElement('SPAN');
+    let imgC = document.createElement("IMG");
+
+    // Setting attributes
+    divP.setAttribute('class', 'bib-modal');
+    spanC.setAttribute('class', 'bib-close');
+    imgC.setAttribute('class', 'bib-modal-content');
+    imgC.setAttribute('src', imgSrc);
+
+    // Adding texts
+    spanC.innerHTML = '&times;';
+
+    // Handling events
+    spanC.onclick = function(){
+        this.parentElement.remove();
+    }
+
+    // Appending childs
+    divP.appendChild(spanC);
+    divP.appendChild(imgC);
+
+    // Appending to body
+    document.body.appendChild(divP);
+    divP.style.display = 'block';
+    console.log("Big image");
+
+}
+
+
+</script>
+</body>
+
+</html>
